@@ -5,4 +5,4 @@ from rest_framework.serializers import ModelSerializer
 class KitchenSerializer(ModelSerializer):
     class Meta:
         model = Kitchen
-        fields = ['name', 'latitude', 'longitude']
+        fields = ['name', 'opening_hours']
