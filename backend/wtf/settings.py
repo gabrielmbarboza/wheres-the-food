@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kitchens',
+    'addresses',
+    'orders',
+    'meals',
+    'customers',
     'rest_framework',
     'corsheaders',
 ]
