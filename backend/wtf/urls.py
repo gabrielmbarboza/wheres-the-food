@@ -18,12 +18,14 @@ from django.conf.urls import include
 from django.urls import path
 from rest_framework import routers
 from kitchens.api.viewsets import KitchenViewSet
+from addresses.api.viewsets import AddressViewSet
 from meals.api.viewsets import MealViewSet
 from customers.api.viewsets import CustomerViewSet
 from orders.api.viewsets import OrderViewSet
 
 router = routers.DefaultRouter()
 router.register(r'kitchens', KitchenViewSet)
+router.register(r'addresses', AddressViewSet)
 router.register(r'meals', MealViewSet)
 router.register(r'customers', CustomerViewSet)
 router.register(r'orders', OrderViewSet)

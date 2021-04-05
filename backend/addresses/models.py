@@ -11,6 +11,7 @@ class Address(models.Model):
     state = models.CharField(max_length=250)
     fed_unit = models.CharField(max_length=250)
     zipcode = models.CharField(max_length=20)
-    lat = models.DecimalField(max_digits=9, decimal_places=6)
-    lon = models.DecimalField(max_digits=9, decimal_places=6)
-    kitchen = models.ForeignKey(Kitchen, on_delete=models.CASCADE)
+    lat = models.CharField(max_length=30)
+    lon = models.CharField(max_length=30)
+    kitchen = models.OneToOneField(
+        Kitchen, related_name='address', on_delete=models.CASCADE)
